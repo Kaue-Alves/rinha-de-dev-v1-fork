@@ -9,7 +9,7 @@ const pool = new Pool({
   database: process.env.DB_NAME ?? process.env.DATABASE,
   password: process.env.DB_PASS ?? process.env.PASSWORD,
   port: Number.parseInt(process.env.DB_PORT ?? process.env.PORT ?? '5432', 10),
-  max: Number.parseInt(process.env.DB_POOL_MAX ?? '10', 20),
+  max: Number.parseInt(process.env.DB_POOL_MAX ?? '10', 10),
 });
 
 export async function buscarEventos() {
